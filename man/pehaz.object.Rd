@@ -25,9 +25,6 @@ Common components of a \code{pehaz} object:
 \item{F.U.Time}{the followup time (for the bin?)}
 }
 
-\seealso{
-\code{\link{pehaz}}}.
-}
+\seealso{ \code{\link{pehaz}}}
 \keyword{survival}
-
 
