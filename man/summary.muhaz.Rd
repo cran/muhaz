@@ -21,11 +21,13 @@ For bw.method="local" and bw.method="knn" also reports smoothing bandwidth
 used to smooth the optimal local bandwidths.
 }
 \usage{
-summary.muhaz(x)
+summary.muhaz(object, ...)
 }
 \arguments{
-\item{x}{
-Object of class \code{muhaz} (output from calling \code{muhaz} function)
+  \item{object}{
+    Object of class \code{muhaz} (output from calling \code{muhaz}
+    function)}
+  \item{...}{Ignored for now.}
 }}
 \seealso{
 \code{\link{muhaz}}, \code{\link{muhaz.object}}

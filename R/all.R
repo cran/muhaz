@@ -284,34 +284,34 @@ print.pehaz <- function( x , ... )
   {
     cat("\nCall:\n")
     print(x$call)
-    
+
     cat("\nBin Width:\n")
     print(x$Width)
-    
+
     cat("\nCuts Defining the Bins:\n")
     print(x$Cuts)
-    
+
     cat("\nHazard Estimate for Each Bin:\n")
     print(x$Hazard)
-    
+
     cat("\nNumber of Events in Each Bin:\n")
     print(x$Events)
-    
+
     cat("\nNumber at Risk in Each Bin:\n")
     print(x$At.Risk)
-    
+
     cat("\nTotal Follow-up Time in Each Bin:\n")
 	print(x$F.U.Time)
-    
+
     invisible()
 }
-summary.muhaz <- function(x) {
+summary.muhaz <- function(object,...) {
 
-  cat("\nNumber of Observations ..........", x$pin$nobs)
-  cat("\nCensored Observations ...........", x$pin$nobs-sum(x$pin$delta))
-  
+  cat("\nNumber of Observations ..........", object$pin$nobs)
+  cat("\nCensored Observations ...........", object$pin$nobs-sum(object$pin$delta))
+
   cat("\nMethod used ..................... ")
-  y <- x$pin$method
+  y <- object$pin$method
   if (y == 1) {
     cat("Global")
   } else if (y == 2) {
@@ -324,7 +324,7 @@ summary.muhaz <- function(x) {
 
   cat("\nBoundary Correction Type ........ ")
 
-  y <- x$pin$b.cor
+  y <- object$pin$b.cor
   if (y == 0) {
     cat("None")
   } else if (y == 1) {
@@ -334,9 +334,9 @@ summary.muhaz <- function(x) {
   } else {
     cat("Unknown")
       }
-  
+
   cat("\nKernel type ..................... ")
-  y <- x$pin$kernel.type
+  y <- object$pin$kernel.type
   if (y == 0) {
     cat("Rectangle")
   } else if (y == 1) {
@@ -348,26 +348,26 @@ summary.muhaz <- function(x) {
   } else {
     cat("Unknown")
   }
-  
-  cat("\nMinimum Time ....................", round(x$pin$min.time,2))
-  cat("\nMaximum Time ....................", round(x$pin$max.time,2))
-  
-  cat("\nNumber of minimization points ...", x$pin$n.min.grid)
-  cat("\nNumber of estimation points .....", x$pin$n.est.grid)
-  
-  cat("\nPilot Bandwidth .................", round(x$pin$bw.pilot,2))
-  cat("\nSmoothing Bandwidth .............", round(x$pin$bw.smooth,2))
-  
-  y <- x$pin$method
+
+  cat("\nMinimum Time ....................", round(object$pin$min.time,2))
+  cat("\nMaximum Time ....................", round(object$pin$max.time,2))
+
+  cat("\nNumber of minimization points ...", object$pin$n.min.grid)
+  cat("\nNumber of estimation points .....", object$pin$n.est.grid)
+
+  cat("\nPilot Bandwidth .................", round(object$pin$bw.pilot,2))
+  cat("\nSmoothing Bandwidth .............", round(object$pin$bw.smooth,2))
+
+  y <- object$pin$method
   if (y == 1) {
-    cat("\nOptimal Global Bandwidth ........", round(x$bw.glob,2))
+    cat("\nOptimal Global Bandwidth ........", round(object$bw.glob,2))
   } else if (y == 3) {
-    cat("\nOptimal Nearest Neighbor ........", x$kopt)
+    cat("\nOptimal Nearest Neighbor ........", object$kopt)
   }
-  
-  cat("\nMinimum IMSE ....................", round(x$imse.opt,2))
+
+  cat("\nMinimum IMSE ....................", round(object$imse.opt,2))
   cat("\n")
-  
+
   return (invisible())
 }
 kphaz.fit <- function(time, status, strata, q = 1, method = "nelson")

@@ -10,12 +10,18 @@ hazard rate.
 Additional plots can be added to the same of axes using `lines.muhaz'.
 }
 \usage{
-plot.muhaz(x, \dots)
-lines.muhaz(x)
+plot.muhaz(x, ylim, type, xlab, ylab, ...)
+lines.muhaz(x, ...)
 }
 \arguments{
-\item{x}{
-Object of class \code{muhaz} (output from calling \code{muhaz} function)
+  \item{x}{
+    Object of class \code{muhaz} (output from calling \code{muhaz}
+    function)}
+  \item{ylim}{Limits for the y axis.}
+  \item{type}{type argument for \code{plot}.}
+  \item{xlab}{Label for the x axis.}
+  \item{ylab}{Label for the y axis.}
+  \item{...}{Additional arguments to be passed along.
 }}
 \seealso{
 \code{\link{muhaz}}}

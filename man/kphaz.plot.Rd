@@ -7,7 +7,7 @@ kphaz.plot
 Plots a Kaplan-Meier type hazard estimate.
 }
 \usage{
-kphaz.plot(fit)
+kphaz.plot(fit, ...)
 }
 \arguments{
 \item{fit}{

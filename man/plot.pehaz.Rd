@@ -16,6 +16,7 @@ lines.pehaz(x, lty=2, ...)
   \item{x}{ A \code{pehaz} object. }
   \item{xlab}{ The x-axis label. }
   \item{ylab}{ The y-axis label. }
+  \item{lty}{The line type to use when plotting.}
   \item{\dots}{ Other graphical parameters, passed to \code{plot} }
 }
 
