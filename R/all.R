@@ -35,7 +35,7 @@ muhaz <- function(times, delta, subset, min.time, max.time, bw.grid, bw.pilot,
        }
 
     if ( missing(subset) ) {
-        subset <- rep(T, nobs)
+        subset <- rep(TRUE, nobs)
     } else {
         if ( is.logical(subset) ) {
             if ( length(subset) != nobs ) {
@@ -455,11 +455,11 @@ kphaz.fit <- function(time, status, strata, q = 1, method = "nelson")
 # strata
 #
 	if(missing(strata))
-		qstrata <- F
+		qstrata <- FALSE
 	else {
 		if(length(strata) != length(time))
 			stop("\"Strata\" vector is the wrong length")
-		qstrata <- T
+		qstrata <- TRUE
 	}
 	if(!is.numeric(q))
 		stop("Agument \"q\" must be a numberic value")
@@ -608,7 +608,7 @@ kphaz.plot <- function(fit, ...)
 #
 	ind <- (strata == ustrata[1]) & (!is.nan(haz))
 	xmax <- max(time)
-	ymax <- max(haz[((is.nan(haz) == F) & (is.na(haz) == F))])
+	ymax <- max(haz[((!is.nan(haz)) & (!is.na(haz)))])
 	x <- time[ind]
 	y <- haz[ind]
 	if(min(x) > 0) {
