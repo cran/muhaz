@@ -141,7 +141,8 @@ muhaz <- function(times, delta, subset, min.time, max.time, bw.grid, bw.pilot,
                         varmin = double(n.min.grid),
                         imsemin = double(1),
                         globlb = double(1),
-                        globlmse = double(gridb))
+                        globlmse = double(gridb),
+			PACKAGE = "muhaz")
 
         if (method == 1) {
             ans <- list(pin=pin.common, est.grid=zz, haz.est=ans$fzz,
@@ -177,7 +178,8 @@ muhaz <- function(times, delta, subset, min.time, max.time, bw.grid, bw.pilot,
                         as.integer(kmax),
                         bopt = double(n.min.grid),
                         bopt1 = double(n.est.grid),
-                        kimse = double(kmax-kmin+1))
+                        kimse = double(kmax-kmin+1),
+			PACKAGE = "muhaz")
         ans <- list(pin=pin.common, est.grid=zz, haz.est=ans$fzz,
                     bw.loc=ans$bopt, bw.loc.sm=ans$bopt1, k.grid=kmin:kmax,
                     k.imse= ans$kimse, imse.opt=ans$kimse[ans$kopt-kmin+1],

@@ -33,10 +33,11 @@ midpoint. Default is 1.
 Type of hazard estimation made. Must be one of "nelson"
 or "product-limit". The default is "nelson".
 }
+}
 \value{
 A list representing the results of the hazard estimation,
 with the following components:
-}
+
 \item{time}{
 A vector containing the times at which hazard estimations were made.
 }
