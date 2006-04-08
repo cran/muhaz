@@ -13,7 +13,6 @@ Objects of this class have methods for the functions \code{summary},
 }
 \section{STRUCTURE}{
 Common components of a \code{pehaz} object:
-}
 \describe{
   A list containing the following components:
 \item{call}{the call to pehaz}
@@ -23,6 +22,7 @@ Common components of a \code{pehaz} object:
 \item{Events}{the number of events in each bin}
 \item{At.Risk}{the number at risk in each bin}
 \item{F.U.Time}{the followup time (for the bin?)}
+}
 }
 
 \seealso{ \code{\link{pehaz}}}
