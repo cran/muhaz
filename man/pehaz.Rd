@@ -47,7 +47,7 @@ components, see \code{object.pehaz}.
 \code{\link{pehaz.object}}
 }
 \examples{
-data(ovarian)
+data(ovarian, package="survival")
 attach(ovarian)
 fit <- pehaz(futime, fustat)
 plot(fit)

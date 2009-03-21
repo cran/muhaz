@@ -8,8 +8,8 @@
   the current plot.
 }
 \usage{
-plot.pehaz(x, xlab="Time", ylab="Hazard Rate", ...)
-lines.pehaz(x, lty=2, ...)
+\method{plot}{pehaz}(x, xlab="Time", ylab="Hazard Rate", ...)
+\method{lines}{pehaz}(x, lty=2, ...)
 }
 
 \arguments{
@@ -27,7 +27,7 @@ lines.pehaz(x, lty=2, ...)
 \seealso{ \code{\link{pehaz.object}} }
 
 \examples{
-  data(ovarian)
+  data(ovarian, package="survival")
   attach(ovarian)
   fit <- pehaz(futime, fustat)
   plot(fit)

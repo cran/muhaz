@@ -25,7 +25,7 @@ strata with 1 or more point.
 }
 \examples{
 # Use "kphaz.fit" to generate a hazard estimate
-data(ovarian)
+data(ovarian, package="survival")
 attach(ovarian)
 kpfit <- kphaz.fit(futime, fustat)
 # Use "kphaz.plot" to plot the estimate

@@ -21,19 +21,19 @@ For bw.method="local" and bw.method="knn" also reports smoothing bandwidth
 used to smooth the optimal local bandwidths.
 }
 \usage{
-summary.muhaz(object, ...)
+\method{summary}{muhaz}(object, ...)
 }
 \arguments{
   \item{object}{
     Object of class \code{muhaz} (output from calling \code{muhaz}
     function)}
   \item{...}{Ignored for now.}
-}}
+}
 \seealso{
 \code{\link{muhaz}}, \code{\link{muhaz.object}}
 }
 \examples{
-data(ovarian)
+data(ovarian, package="survival")
 attach(ovarian)
 fit <- muhaz(futime, fustat)
 summary(fit)

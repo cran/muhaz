@@ -69,7 +69,7 @@ muhaz <- function(times, delta, subset, min.time, max.time, bw.grid, bw.pilot,
 
     if ( missing(max.time) ) {
     # use the time corresponding to 10 survivors
-        sfit <- survfit( Surv(times,delta) )
+        sfit <- survfit( Surv(times,delta) ~ 1 )
         endz <- approx(sfit$n.risk,sfit$time,xout=10)$y
     } else {
         if (max.time > times[nobs]) {

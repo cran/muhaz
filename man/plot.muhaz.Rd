@@ -1,17 +1,18 @@
 \name{plot.muhaz}
 \alias{plot.muhaz}
 \alias{lines.muhaz}
-\title{Plots estimated hazard function from an object of class `muhaz'.}
+\title{Plots estimated hazard function from an object of class muhaz.}
 \description{
-Default time limits are those provided to `muhaz', which default
+Default time limits are those provided to \code{muhaz}, which default
 to zero and the time corresponding to when ten patients remain
 at risk.  Default y-axis limits are 0 and the maximum estimated
 hazard rate.
-Additional plots can be added to the same of axes using `lines.muhaz'.
+Additional lines can be added to the same set of axes using the \code{lines}
+method.
 }
 \usage{
-plot.muhaz(x, ylim, type, xlab, ylab, ...)
-lines.muhaz(x, ...)
+\method{plot}{muhaz}(x, ylim, type, xlab, ylab, ...)
+\method{lines}{muhaz}(x, ...)
 }
 \arguments{
   \item{x}{
@@ -21,10 +22,9 @@ lines.muhaz(x, ...)
   \item{type}{type argument for \code{plot}.}
   \item{xlab}{Label for the x axis.}
   \item{ylab}{Label for the y axis.}
-  \item{...}{Additional arguments to be passed along.
-}}
+  \item{...}{Additional arguments to be passed along.}
+}
 \seealso{
-\code{\link{muhaz}}}
+\code{\link{muhaz}}
 }
 \keyword{survival}
-% Converted by Sd2Rd version 1.10.
