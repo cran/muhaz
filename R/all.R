@@ -559,8 +559,8 @@ kphaz.fit <- function(time, status, strata, q = 1, method = "nelson")
 	time <- dtime
 	strata <- dstrata
 	if(qstrata)
-		return(time, haz, var, strata)
-	else return(time, haz, var)
+		return(list(time=time, haz=haz, var=var, strata=strata))
+	else return(list(time=time, haz=haz, var=var))
 }
 kphaz.plot <- function(fit, ...)
 {
@@ -578,10 +578,10 @@ kphaz.plot <- function(fit, ...)
 		time <- fit$time
 		haz <- fit$haz
 	}
-	else stop("Arguement \"fit\" must be the result of a call to \"kphaz.fit\""
+	else stop("Argument \"fit\" must be the result of a call to \"kphaz.fit\""
 			)	#
 	if(length(time) != length(haz)) stop(
-			"Arguement \"fit\" must be the result of a call to \"kphaz.fit\""
+			"Argument \"fit\" must be the result of a call to \"kphaz.fit\""
 			)	#
 # Check to see if there are any strata
 #
@@ -590,7 +590,7 @@ kphaz.plot <- function(fit, ...)
 		strata <- fit$strata
 	else strata <- rep(1, length(time))
 	if(length(strata) != length(haz)) stop(
-			"Arguement \"fit\" must be the result of a call to \"kphaz.fit\""
+			"Argument \"fit\" must be the result of a call to \"kphaz.fit\""
 			)	#
 # Define, ustrata, the number of unique strata
 #

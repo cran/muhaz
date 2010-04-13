@@ -113,10 +113,6 @@ Returns an object of class 'muhaz', containing input and output values.
 Methods working on such an object are: plot, lines, summary.  For a
 detailed description of its components, see object.muhaz.
 }
-\section{Side Effects}{
-
-
-}
 \details{
 The muhaz object contains a list of the input data and parameter values as
 well as a variety of output data. The hazard function estimate is contained
