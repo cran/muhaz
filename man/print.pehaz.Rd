@@ -5,7 +5,7 @@
   The pehaz object is printed.
 }
 \usage{
-print.pehaz(x, ...)
+\method{print}{pehaz}(x, \dots)
 }
 
 \arguments{
