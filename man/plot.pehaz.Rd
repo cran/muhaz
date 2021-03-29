@@ -27,7 +27,7 @@
 \seealso{ \code{\link{pehaz.object}} }
 
 \examples{
-  data(ovarian, package="survival")
+  data(cancer, package="survival")
   attach(ovarian)
   fit <- pehaz(futime, fustat)
   plot(fit)

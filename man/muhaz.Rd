@@ -159,7 +159,7 @@ summary.muhaz, plot.muhaz, lines.muhaz, muhaz.object
 }
 \examples{
 # to compute a locally optimal estimate
-data(ovarian, package="survival")
+data(cancer, package="survival")
 attach(ovarian)
 fit1 <- muhaz(futime, fustat)
 plot(fit1)

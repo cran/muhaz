@@ -2,7 +2,7 @@
 \alias{summary.muhaz}
 \title{Display the most important input parameters used in calling the
   `muhaz' function.}
-\description{It also displays some of the output data. 
+\description{It also displays some of the output data.
 Common to all three methods:
 * number of observations
 * number of censored observations
@@ -33,7 +33,7 @@ used to smooth the optimal local bandwidths.
 \code{\link{muhaz}}, \code{\link{muhaz.object}}
 }
 \examples{
-data(ovarian, package="survival")
+data(cancer, package="survival")
 attach(ovarian)
 fit <- muhaz(futime, fustat)
 summary(fit)
