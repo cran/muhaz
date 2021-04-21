@@ -1,5 +1,5 @@
 94d55d512a9ba36caa9b7df079bae19f *COPYING
-53bb5c1259a79d1cdd32639781298ab5 *DESCRIPTION
+d4b6b0e7f7026acbb02887a97fcd11e9 *DESCRIPTION
 2ef4a59948143e84dd5d7a7e7ca72471 *NAMESPACE
 ec0c3abb6858582f30a48c304259eb3c *R/all.R
 0ac318f9743508ed18fd88327f02cd61 *README
@@ -13,5 +13,5 @@ e791f3129e1a308d7de6a4a981221c6e *man/plot.muhaz.Rd
 29c88b916a64dd9a4eeac397c281edc3 *man/plot.pehaz.Rd
 d282de702275f96fabddb4403abee25e *man/print.pehaz.Rd
 763bd748a418d241622487bcfe247207 *man/summary.muhaz.Rd
-a3be4e175cdbffaa9dff07767e46fecb *src/init.c
+aff3c66f56a22b34d26133c193546c64 *src/init.c
 eb43691a09fee06f86e8450f92cd02d1 *src/muhaz.f

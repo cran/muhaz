@@ -16,8 +16,7 @@ extern void F77_NAME(newhad)(void *, void *, void *, void *, void *, void *, voi
      Basing the int and double designations on the R calling routine
 */
 /* .Fortran calls */
-extern void F77_NAME(knnhad)(int *n, double *x, int *delta, int *ks, int *local, double *z, int *gridz,
-double *zz, double *m, double *bpilot, double *bw, double *gridb, double *endl, double *endr, double *bsmo, int *kflag, double *fzz, int *bopt, double *bopt1, int *msemin, int *biasmn, double *varmin, double *imsemn, double *globlb, double *glmse);
+extern void F77_NAME(knnhad)(int *n, double *x, int *delta, int *ks, int *bwchoi, int *gridz, double *z, int *m, double *zz, double *bpilot, double *endl, double *endr, double *bsmo, int *kflag, double *fzz, int *kmin, int *kmax, double *bopt, double *bopt1, double *kimse);
 extern void F77_NAME(newhad)(int *n, double *x, int *delta, int *ks, int *local, double *z, int *gridz,
 double *zz, int *m, double *bpilot, double *bw, int *gridb, double *endl, double *endr, double *bsmo,  int *kflag, double *fzz, double *bopt, double *bopt1, double *msemin, double *biasmn, double *varmin, double * imsemn, double *globlb, double *glmse);
 
